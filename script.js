@@ -100,7 +100,7 @@ if (ctaBtn) {
 }
 
 // Role slide animation
-const roles = ['UI/UX Designer', 'Full Stack Developer', 'Backend Developer', 'Frontend Developer'];
+const roles = ['Full Stack Developer', 'Flutter Developer'];
 let currentRoleIndex = 0;
 const roleChanger = document.getElementById('role-changer');
 
