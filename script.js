@@ -122,4 +122,15 @@ if (roleChanger) {
     }, 4000);
 }
 
+// Project 4 video control - play for 15 seconds then restart
+const project4Video = document.getElementById('project4Video');
+if (project4Video) {
+    project4Video.addEventListener('loadedmetadata', function() {
+        setInterval(function() {
+            project4Video.currentTime = 0;
+            project4Video.play();
+        }, 15000);
+    });
+}
+
 console.log('GridX Portfolio loaded successfully! 🚀');
