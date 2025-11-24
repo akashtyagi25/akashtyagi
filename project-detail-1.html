@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Platform - Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo"><img src="logo3.png" alt="Logo"></a>
+                <ul class="nav-menu">
+                </ul>
+                <div class="nav-buttons">
+                    <a href="index.html" class="cta-btn">Home</a>
+                    <a href="projects.html" class="cta-btn">Projects</a>
+                    <a href="education.html" class="cta-btn">Education</a>
+                    <a href="#" class="cta-btn">
+                        <i class="fas fa-download"></i> Resume
+                    </a>
+                </div>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Project Detail Content -->
+    <section class="project-detail-section">
+        <div class="project-hero-bg">
+            <img src="#" alt="Project Background" class="project-hero-image">
+            <div class="project-hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="project-detail-header">
+                <a href="projects.html" class="back-to-projects">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <h1 class="project-title">UI/UX Design</h1>
+                <div class="project-tags">
+                    <span class="tag">Figma</span>
+                    <!-- <span class="tag">Node.js</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">Redux</span> -->
+                </div>
+            </div>
+
+            <div class="project-detail-content">
+                <!-- Description Section -->
+                <div class="project-section">
+                    <h2><i class="fas fa-align-left"></i> Project Overview</h2>
+                    <p>
+                        A modern UI/UX design project created in Figma, focusing on clean aesthetics and user-friendly interfaces. 
+                        This design showcases contemporary design principles with attention to visual hierarchy, spacing, and typography.
+                    </p>
+                    <p>
+                        The design features a cohesive color palette, smooth transitions, and intuitive navigation patterns. 
+                        Special emphasis was placed on creating a seamless user experience across different screen sizes and devices.
+                    </p>
+                    <p>
+                        Key design elements include minimalist layouts, bold typography, micro-interactions, 
+                        and a consistent design system with reusable components and style guides.
+                    </p>
+                </div>
+
+                <!-- Screenshots Section -->
+                <div class="project-section">
+                    <h2><i class="fas fa-images"></i> Screenshots</h2>
+                    <div class="project-screenshots">
+                        <div class="screenshot-item" onclick="openImageModal(this)">
+                            <img src="photo1.jpg" alt="Screenshot 1">
+                        </div>
+                        <div class="screenshot-item" onclick="openImageModal(this)">
+                            <img src="photo2.jpg" alt="Screenshot 2">
+                        </div>
+                        <div class="screenshot-item" onclick="openImageModal(this)">
+                            <img src="photo3.jpg" alt="Screenshot 3">
+                        </div>
+                        <div class="screenshot-item" onclick="openImageModal(this)">
+                            <img src="photo4.jpg" alt="Screenshot 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Modal -->
+                <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-image" id="modalImage" src="" alt="">
+                </div>
+
+                <!-- Tech Stack Section
+                <div class="project-section">
+                    <h2><i class="fas fa-code"></i> Tech Stack</h2>
+                    <div class="tech-stack-list">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>Redux</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-stripe"></i>
+                            <span>Stripe API</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-lock"></i>
+                            <span>JWT Auth</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-sass"></i>
+                            <span>SCSS</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Links Section -->
+                <!-- <div class="project-section">
+                    <h2><i class="fas fa-link"></i> Project Links</h2>
+                    <div class="project-actions">
+                        <a href="#" class="action-btn">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Image Modal Functions
+        function openImageModal(element) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const img = element.querySelector('img');
+            
+            modal.classList.add('active');
+            modalImg.src = img.src;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+    </script>
+</body>
+</html>
