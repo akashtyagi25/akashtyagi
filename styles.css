@@ -684,13 +684,35 @@ header {
 .education-content h3 {
     font-size: 20px;
     color: var(--text-secondary);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-weight: 400;
 }
 
 .education-content h3 i {
     margin-right: 8px;
     color: var(--text-secondary);
+}
+
+.grade-display {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.grade-display i {
+    color: var(--text-primary);
+}
+
+.grade-display strong {
+    color: var(--text-primary);
+    font-size: 16px;
 }
 
 .education-description {
