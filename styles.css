@@ -18,9 +18,29 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    animation: fadeIn 0.5s ease-in-out;
     background-color: var(--bg-dark);
     overflow-x: hidden;
+}
+
+/* Page Transition Animation */
+@keyframes pageSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body > section,
+body > main {
+    animation: pageSlideIn 0.6s ease-out;
+}
+
+header {
+    animation: none !important;
 }
 
 /* Navigation */
